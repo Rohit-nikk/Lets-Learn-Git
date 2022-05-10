@@ -28,7 +28,7 @@ function PaginationComponent() {
   for (let i = 1; i <= Math.ceil(data.length / itemsPerPage); i++) {
     pages.push(i);
   }
-
+  
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
@@ -77,7 +77,7 @@ function PaginationComponent() {
   let pageIncrementBtn = null;
   if (pages.length > maxPageNumberLimit) {
     pageIncrementBtn = <li onClick={handleNextbtn}> &hellip; </li>;
-  }
+  } 
 
   let pageDecrementBtn = null;
   if (minPageNumberLimit >= 1) {
